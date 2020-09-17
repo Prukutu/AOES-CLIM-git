@@ -24,10 +24,6 @@
   {% assign current = site.start_time %}
 
   <table class="table table-striped">
-  <tr>
-    {% if multiday %}<td class="col-md-1"></td>{% endif %}
-    <td class="{% if multiday %}col-md-1{% else %}col-md-2{% endif %}"></td>
-  </tr>
   {% for lesson_episode in lesson_episodes %}
     {% if site.episode_order %}
       {% assign episode = site.episodes | where: "slug", lesson_episode | first %}
@@ -84,8 +80,5 @@
   </tr>
   </table>
 
-  <p>
-    The actual schedule may vary slightly depending on the topics and exercises chosen by the instructor.
-  </p>
 
 </div>

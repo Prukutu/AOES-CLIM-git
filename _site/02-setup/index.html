@@ -19,7 +19,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="last-modified" content="2020-09-16 14:43:31 -0600">
+    <meta http-equiv="last-modified" content="2020-09-16 18:28:02 -0600">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- meta "search-domain" used for google site search function google_search() -->
     <meta name="search-domain" value="">
@@ -47,7 +47,7 @@
     <link rel="icon" type="image/png" href="../assets/favicons/swc/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="../assets/favicons/swc/favicon-16x16.png" sizes="16x16" />
     <link rel="icon" type="image/png" href="../assets/favicons/swc/favicon-128.png" sizes="128x128" />
-    <meta name="application-name" content="Software Carpentry - Lesson Title"/>
+    <meta name="application-name" content="Software Carpentry - Version Control with Git"/>
     <meta name="msapplication-TileColor" content="#FFFFFF" />
     <meta name="msapplication-TileImage" content="../assets/favicons/swc/mstile-144x144.png" />
     <meta name="msapplication-square70x70logo" content="../assets/favicons/swc/mstile-70x70.png" />
@@ -64,7 +64,7 @@
 	<![endif]-->
 
   <title>
-  Setting Up and Using Git and Github &ndash; Lesson Title
+  Setting Up and Using Git and Github &ndash; Version Control with Git
   </title>  
 
   </head>
@@ -119,25 +119,11 @@
       </button>
 
       
-      
-      <a href="https://software-carpentry.org" class="pull-left">
-        <img class="navbar-logo" src="../assets/img/swc-icon-blue.svg" alt="Software Carpentry logo" />
-      </a>
-      
-
-      
       <a class="navbar-brand" href="../">Home</a>
 
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-
-	
-        <li><a href="../CODE_OF_CONDUCT.html">Code of Conduct</a></li>
-
-        
-	
-        <li><a href="../setup.html">Setup</a></li>
 
         
         <li class="dropdown">
@@ -157,37 +143,12 @@
             <li><a href="../04-changes/index.html">Tracking Changes</a></li>
             
             
-            <li><a href="../05-history/index.html">Exploring History</a></li>
-            
-            
-            <li><a href="../06-ignore/index.html">Ignoring Things</a></li>
-            
-            
-            <li><a href="../07-github/index.html">Remotes in GitHub</a></li>
-            
-            
-            <li><a href="../08-collab/index.html">Collaborating</a></li>
-            
-            
-            <li><a href="../09-conflict/index.html">Conflicts</a></li>
-            
-            
-            <li><a href="../10-open/index.html">Open Science</a></li>
-            
-            
-            <li><a href="../11-licensing/index.html">Licensing</a></li>
-            
-            
-            <li><a href="../12-citation/index.html">Citation</a></li>
-            
-            
-            <li><a href="../13-hosting/index.html">Hosting</a></li>
+            <li><a href="../05-github/index.html">Remotes in GitHub</a></li>
             
 	    <li role="separator" class="divider"></li>
             <li><a href="../aio/index.html">All in one page (Beta)</a></li>
           </ul>
         </li>
-	
 
 	
 	
@@ -212,11 +173,6 @@
         </li>
 	
 
-	
-        <li><a href="../LICENSE.html">License</a></li>
-	
-	<li><a href="/edit//_episodes/02-setup.md" data-checker-ignore>Improve this page <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a></li>
-	
       </ul>
       <form class="navbar-form navbar-right" role="search" id="search" onsubmit="google_search(); return false;">
         <div class="form-group">
@@ -277,7 +233,7 @@
   </div>
   <div class="col-xs-10">
     
-    <h3 class="maintitle"><a href="../">Lesson Title</a></h3>
+    <h3 class="maintitle"><a href="../">Version Control with Git</a></h3>
     
   </div>
   <div class="col-xs-1">
@@ -353,33 +309,32 @@
 
 </blockquote>
 
-<p>Git is a command lin version control system that is available by default on most Unix/Linux, Mac computers and can be easily installed for Windows (https://gitforwindows.org/). You can use it on your own computer.  In this class,  we will be using it on the COLA computers where it is already installed.</p>
+<p>Git is a command line version control system that is available by default on most Unix/Linux, Mac computers and can be easily installed for Windows (https://gitforwindows.org/). You can use it on your own computer.  In this class,  we will be using it on the COLA computers where it is already installed.</p>
 
-<p>When we use Git on a new computer for the first time,
+<p>When we use Git for the first time,
 we need to configure a few things. Below are a few examples
 of configurations we will set as we get started with Git:</p>
 
 <ul>
   <li>our name and email address,</li>
-  <li>what our preferred text editor is,</li>
   <li>and that we want to use these settings globally (i.e. for every project).</li>
 </ul>
 
 <p>On a command line, Git commands are written as <code class="language-plaintext highlighter-rouge">git verb options</code>,
-where <code class="language-plaintext highlighter-rouge">verb</code> is what we actually want to do and <code class="language-plaintext highlighter-rouge">options</code> is additional optional information which may be needed for the <code class="language-plaintext highlighter-rouge">verb</code>. So here is how
-Dracula sets up his new laptop:</p>
+where <code class="language-plaintext highlighter-rouge">verb</code> is what we actually want to do and <code class="language-plaintext highlighter-rouge">options</code> is additional optional information which may be needed for the <code class="language-plaintext highlighter-rouge">verb</code>.</p>
 
+<p>First, we can check to see how these options are set by default on the COLA Computers:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git config <span class="nt">--list</span><span class="s2">"
+</span></code></pre></div></div>
+
+<p>Here is how Dracula sets up his new laptop:</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git config <span class="nt">--global</span> user.name <span class="s2">"Vlad Dracula"</span>
 <span class="nv">$ </span>git config <span class="nt">--global</span> user.email <span class="s2">"vlad@tran.sylvan.ia"</span>
 </code></pre></div></div>
 
 <p>Please use your own name and email address instead of Dracula’s. This user name and email will be associated with your subsequent Git activity,
 which means that any changes pushed to
-<a href="https://github.com/">GitHub</a>,
-<a href="https://bitbucket.org/">BitBucket</a>,
-<a href="https://gitlab.com/">GitLab</a> or
-another Git host server
-in a later lesson will include this information.</p>
+<a href="https://github.com/">GitHub</a> will include this information.</p>
 
 <p>For these lessons, we will be interacting with <a href="https://github.com/">GitHub</a> and so the email address used should be the same as the one used when setting up your GitHub account. If you are concerned about privacy, please review <a href="https://help.github.com/articles/keeping-your-email-address-private/">GitHub’s instructions for keeping your email address private</a>.</p>
 
@@ -389,116 +344,7 @@ in a later lesson will include this information.</p>
   <p>If you elect to use a private email address with GitHub, then use that same email address for the <code class="language-plaintext highlighter-rouge">user.email</code> value, e.g. <code class="language-plaintext highlighter-rouge">username@users.noreply.github.com</code> replacing <code class="language-plaintext highlighter-rouge">username</code> with your GitHub one.</p>
 </blockquote>
 
-<blockquote class="callout">
-  <h2 id="line-endings">Line Endings</h2>
-
-  <p>As with other keys, when you hit <kbd>Return</kbd> on your keyboard,
-your computer encodes this input as a character.
-Different operating systems use different character(s) to represent the end of a line.
-(You may also hear these referred to as newlines or line breaks.)
-Because Git uses these characters to compare files,
-it may cause unexpected issues when editing a file on different machines. 
-Though it is beyond the scope of this lesson, you can read more about this issue 
-<a href="https://help.github.com/articles/dealing-with-line-endings/">on this GitHub page</a>.</p>
-</blockquote>
-<blockquote>
-
-  <p>You can change the way Git recognizes and encodes line endings
-using the <code class="language-plaintext highlighter-rouge">core.autocrlf</code> command to <code class="language-plaintext highlighter-rouge">git config</code>.
-The following settings are recommended:</p>
-
-  <p>On macOS and Linux:</p>
-
-  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git config <span class="nt">--global</span> core.autocrlf input
-</code></pre></div>  </div>
-
-  <p>And on Windows:</p>
-
-  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git config <span class="nt">--global</span> core.autocrlf <span class="nb">true</span>
-</code></pre></div>  </div>
-
-</blockquote>
-
-<p>Dracula also has to set his favorite text editor, following this table:</p>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">Editor</th>
-      <th style="text-align: left">Configuration command</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">Atom</td>
-      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">$ git config --global core.editor "atom --wait"</code></td>
-    </tr>
-    <tr>
-      <td style="text-align: left">nano</td>
-      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">$ git config --global core.editor "nano -w"</code></td>
-    </tr>
-    <tr>
-      <td style="text-align: left">BBEdit (Mac, with command line tools)</td>
-      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">$ git config --global core.editor "bbedit -w"</code></td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Sublime Text (Mac)</td>
-      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">$ git config --global core.editor "/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl -n -w"</code></td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Sublime Text (Win, 32-bit install)</td>
-      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">$ git config --global core.editor "'c:/program files (x86)/sublime text 3/sublime_text.exe' -w"</code></td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Sublime Text (Win, 64-bit install)</td>
-      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">$ git config --global core.editor "'c:/program files/sublime text 3/sublime_text.exe' -w"</code></td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Notepad++ (Win, 32-bit install)</td>
-      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">$ git config --global core.editor "'c:/program files (x86)/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"</code></td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Notepad++ (Win, 64-bit install)</td>
-      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">$ git config --global core.editor "'c:/program files/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"</code></td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Kate (Linux)</td>
-      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">$ git config --global core.editor "kate"</code></td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Gedit (Linux)</td>
-      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">$ git config --global core.editor "gedit --wait --new-window"</code></td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Scratch (Linux)</td>
-      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">$ git config --global core.editor "scratch-text-editor"</code></td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Emacs</td>
-      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">$ git config --global core.editor "emacs"</code></td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Vim</td>
-      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">$ git config --global core.editor "vim"</code></td>
-    </tr>
-    <tr>
-      <td style="text-align: left">VS Code</td>
-      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">$ git config --global core.editor "code --wait"</code></td>
-    </tr>
-  </tbody>
-</table>
-
-<p>It is possible to reconfigure the text editor for Git whenever you want to change it.</p>
-
-<blockquote class="callout">
-  <h2 id="exiting-vim">Exiting Vim</h2>
-
-  <p>Note that Vim is the default editor for many programs. If you haven’t used Vim before and wish to exit a session without saving
-your changes, press <kbd>Esc</kbd> then type <code class="language-plaintext highlighter-rouge">:q!</code> and hit <kbd>Return</kbd>.
-If you want to save your changes and quit, press <kbd>Esc</kbd> then type <code class="language-plaintext highlighter-rouge">:wq</code> and hit <kbd>Return</kbd>.</p>
-</blockquote>
-
-<p>The four commands we just ran above only need to be run once: the flag <code class="language-plaintext highlighter-rouge">--global</code> tells Git
+<p>These commands we just ran above only need to be run once: the flag <code class="language-plaintext highlighter-rouge">--global</code> tells Git
 to use the settings for every project, in your user account, on this computer.</p>
 
 <p>You can check your settings at any time:</p>
@@ -506,26 +352,7 @@ to use the settings for every project, in your user account, on this computer.</
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git config <span class="nt">--list</span>
 </code></pre></div></div>
 
-<p>You can change your configuration as many times as you want: use the
-same commands to choose another editor or update your email address.</p>
-
-<blockquote class="callout">
-  <h2 id="proxy">Proxy</h2>
-
-  <p>In some networks you need to use a
-<a href="https://en.wikipedia.org/wiki/Proxy_server">proxy</a>. If this is the case, you
-may also need to tell Git about the proxy:</p>
-
-  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git config <span class="nt">--global</span> http.proxy proxy-url
-<span class="nv">$ </span>git config <span class="nt">--global</span> https.proxy proxy-url
-</code></pre></div>  </div>
-
-  <p>To disable the proxy, use</p>
-
-  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git config <span class="nt">--global</span> <span class="nt">--unset</span> http.proxy
-<span class="nv">$ </span>git config <span class="nt">--global</span> <span class="nt">--unset</span> https.proxy
-</code></pre></div>  </div>
-</blockquote>
+<p>You can change your configuration anytime you want using the same commands.</p>
 
 <blockquote class="callout">
   <h2 id="git-help-and-manual">Git Help and Manual</h2>
@@ -626,30 +453,6 @@ may also need to tell Git about the proxy:</p>
 
 
 <footer>
-  <div class="row">
-    <div class="col-md-6 license" id="license-info" align="left">
-	
-	Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> 2018–2020
-	by <a href="https://carpentries.org/">The Carpentries</a>
-        <br>
-        Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> 2016–2018
-	by <a href="https://software-carpentry.org">Software Carpentry Foundation</a>
-	
-    </div>
-    <div class="col-md-6 help-links" align="right">
-	
-	<a href="/edit//_episodes/02-setup.md" data-checker-ignore>Edit on GitHub</a>
-	
-	/
-	<a href="/blob//CONTRIBUTING.md" data-checker-ignore>Contributing</a>
-	/
-	<a href="/">Source</a>
-	/
-	<a href="/blob//CITATION" data-checker-ignore>Cite</a>
-	/
-	<a href="mailto:team@carpentries.org">Contact</a>
-    </div>
-  </div>
   <div class="row">
     <div class="col-md-12" align="center">
       Using <a href="https://github.com/carpentries/styles/">The Carpentries style</a>

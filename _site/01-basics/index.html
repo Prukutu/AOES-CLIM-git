@@ -19,7 +19,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="last-modified" content="2020-09-16 14:43:31 -0600">
+    <meta http-equiv="last-modified" content="2020-09-16 18:28:02 -0600">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- meta "search-domain" used for google site search function google_search() -->
     <meta name="search-domain" value="">
@@ -47,7 +47,7 @@
     <link rel="icon" type="image/png" href="../assets/favicons/swc/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="../assets/favicons/swc/favicon-16x16.png" sizes="16x16" />
     <link rel="icon" type="image/png" href="../assets/favicons/swc/favicon-128.png" sizes="128x128" />
-    <meta name="application-name" content="Software Carpentry - Lesson Title"/>
+    <meta name="application-name" content="Software Carpentry - Version Control with Git"/>
     <meta name="msapplication-TileColor" content="#FFFFFF" />
     <meta name="msapplication-TileImage" content="../assets/favicons/swc/mstile-144x144.png" />
     <meta name="msapplication-square70x70logo" content="../assets/favicons/swc/mstile-70x70.png" />
@@ -64,7 +64,7 @@
 	<![endif]-->
 
   <title>
-  Automated Version Control &ndash; Lesson Title
+  Automated Version Control &ndash; Version Control with Git
   </title>  
 
   </head>
@@ -119,25 +119,11 @@
       </button>
 
       
-      
-      <a href="https://software-carpentry.org" class="pull-left">
-        <img class="navbar-logo" src="../assets/img/swc-icon-blue.svg" alt="Software Carpentry logo" />
-      </a>
-      
-
-      
       <a class="navbar-brand" href="../">Home</a>
 
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-
-	
-        <li><a href="../CODE_OF_CONDUCT.html">Code of Conduct</a></li>
-
-        
-	
-        <li><a href="../setup.html">Setup</a></li>
 
         
         <li class="dropdown">
@@ -157,37 +143,12 @@
             <li><a href="../04-changes/index.html">Tracking Changes</a></li>
             
             
-            <li><a href="../05-history/index.html">Exploring History</a></li>
-            
-            
-            <li><a href="../06-ignore/index.html">Ignoring Things</a></li>
-            
-            
-            <li><a href="../07-github/index.html">Remotes in GitHub</a></li>
-            
-            
-            <li><a href="../08-collab/index.html">Collaborating</a></li>
-            
-            
-            <li><a href="../09-conflict/index.html">Conflicts</a></li>
-            
-            
-            <li><a href="../10-open/index.html">Open Science</a></li>
-            
-            
-            <li><a href="../11-licensing/index.html">Licensing</a></li>
-            
-            
-            <li><a href="../12-citation/index.html">Citation</a></li>
-            
-            
-            <li><a href="../13-hosting/index.html">Hosting</a></li>
+            <li><a href="../05-github/index.html">Remotes in GitHub</a></li>
             
 	    <li role="separator" class="divider"></li>
             <li><a href="../aio/index.html">All in one page (Beta)</a></li>
           </ul>
         </li>
-	
 
 	
 	
@@ -212,11 +173,6 @@
         </li>
 	
 
-	
-        <li><a href="../LICENSE.html">License</a></li>
-	
-	<li><a href="/edit//_episodes/01-basics.md" data-checker-ignore>Improve this page <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a></li>
-	
       </ul>
       <form class="navbar-form navbar-right" role="search" id="search" onsubmit="google_search(); return false;">
         <div class="form-group">
@@ -277,7 +233,7 @@
   </div>
   <div class="col-xs-10">
     
-    <h3 class="maintitle"><a href="../">Lesson Title</a></h3>
+    <h3 class="maintitle"><a href="../">Version Control with Git</a></h3>
     
   </div>
   <div class="col-xs-1">
@@ -364,7 +320,7 @@ multiple nearly-identical versions of the same document. Some word
 processors let us deal with this a little better, such as Microsoft
 Word’s 
 <a href="https://support.office.com/en-us/article/Track-changes-in-Word-197ba630-0f5f-4a8e-9a77-3712475e806a">Track Changes</a>, 
-Google Docs’ <a href="https://support.google.com/docs/answer/190843?hl=en">version history</a>, or</p>
+Google Docs’ <a href="https://support.google.com/docs/answer/190843?hl=en">version history</a>.</p>
 
 <p>Version control systems start with a base version of the document and
 then record changes you make each step of the way. You can
@@ -526,30 +482,6 @@ problems.</p>
 
 
 <footer>
-  <div class="row">
-    <div class="col-md-6 license" id="license-info" align="left">
-	
-	Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> 2018–2020
-	by <a href="https://carpentries.org/">The Carpentries</a>
-        <br>
-        Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> 2016–2018
-	by <a href="https://software-carpentry.org">Software Carpentry Foundation</a>
-	
-    </div>
-    <div class="col-md-6 help-links" align="right">
-	
-	<a href="/edit//_episodes/01-basics.md" data-checker-ignore>Edit on GitHub</a>
-	
-	/
-	<a href="/blob//CONTRIBUTING.md" data-checker-ignore>Contributing</a>
-	/
-	<a href="/">Source</a>
-	/
-	<a href="/blob//CITATION" data-checker-ignore>Cite</a>
-	/
-	<a href="mailto:team@carpentries.org">Contact</a>
-    </div>
-  </div>
   <div class="row">
     <div class="col-md-12" align="center">
       Using <a href="https://github.com/carpentries/styles/">The Carpentries style</a>

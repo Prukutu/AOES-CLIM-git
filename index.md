@@ -2,6 +2,7 @@
 layout: lesson
 ---
 
+This lesson is modified from [Software Carpentry Version Control with Git](http://swcarpentry.github.io/git-novice/)
 Wolfman and Dracula have been hired by Universal Missions (a space
 services spinoff from Euphoric State University) to investigate if it
 is possible to send their next planetary lander to Mars.  They want to

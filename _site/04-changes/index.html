@@ -19,7 +19,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="last-modified" content="2020-09-16 14:43:31 -0600">
+    <meta http-equiv="last-modified" content="2020-09-16 18:28:02 -0600">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- meta "search-domain" used for google site search function google_search() -->
     <meta name="search-domain" value="">
@@ -47,7 +47,7 @@
     <link rel="icon" type="image/png" href="../assets/favicons/swc/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="../assets/favicons/swc/favicon-16x16.png" sizes="16x16" />
     <link rel="icon" type="image/png" href="../assets/favicons/swc/favicon-128.png" sizes="128x128" />
-    <meta name="application-name" content="Software Carpentry - Lesson Title"/>
+    <meta name="application-name" content="Software Carpentry - Version Control with Git"/>
     <meta name="msapplication-TileColor" content="#FFFFFF" />
     <meta name="msapplication-TileImage" content="../assets/favicons/swc/mstile-144x144.png" />
     <meta name="msapplication-square70x70logo" content="../assets/favicons/swc/mstile-70x70.png" />
@@ -64,7 +64,7 @@
 	<![endif]-->
 
   <title>
-  Tracking Changes &ndash; Lesson Title
+  Tracking Changes &ndash; Version Control with Git
   </title>  
 
   </head>
@@ -119,25 +119,11 @@
       </button>
 
       
-      
-      <a href="https://software-carpentry.org" class="pull-left">
-        <img class="navbar-logo" src="../assets/img/swc-icon-blue.svg" alt="Software Carpentry logo" />
-      </a>
-      
-
-      
       <a class="navbar-brand" href="../">Home</a>
 
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-
-	
-        <li><a href="../CODE_OF_CONDUCT.html">Code of Conduct</a></li>
-
-        
-	
-        <li><a href="../setup.html">Setup</a></li>
 
         
         <li class="dropdown">
@@ -157,37 +143,12 @@
             <li><a href="../04-changes/index.html">Tracking Changes</a></li>
             
             
-            <li><a href="../05-history/index.html">Exploring History</a></li>
-            
-            
-            <li><a href="../06-ignore/index.html">Ignoring Things</a></li>
-            
-            
-            <li><a href="../07-github/index.html">Remotes in GitHub</a></li>
-            
-            
-            <li><a href="../08-collab/index.html">Collaborating</a></li>
-            
-            
-            <li><a href="../09-conflict/index.html">Conflicts</a></li>
-            
-            
-            <li><a href="../10-open/index.html">Open Science</a></li>
-            
-            
-            <li><a href="../11-licensing/index.html">Licensing</a></li>
-            
-            
-            <li><a href="../12-citation/index.html">Citation</a></li>
-            
-            
-            <li><a href="../13-hosting/index.html">Hosting</a></li>
+            <li><a href="../05-github/index.html">Remotes in GitHub</a></li>
             
 	    <li role="separator" class="divider"></li>
             <li><a href="../aio/index.html">All in one page (Beta)</a></li>
           </ul>
         </li>
-	
 
 	
 	
@@ -212,11 +173,6 @@
         </li>
 	
 
-	
-        <li><a href="../LICENSE.html">License</a></li>
-	
-	<li><a href="/edit//_episodes/04-changes.md" data-checker-ignore>Improve this page <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a></li>
-	
       </ul>
       <form class="navbar-form navbar-right" role="search" id="search" onsubmit="google_search(); return false;">
         <div class="form-group">
@@ -277,13 +233,13 @@
   </div>
   <div class="col-xs-10">
     
-    <h3 class="maintitle"><a href="../">Lesson Title</a></h3>
+    <h3 class="maintitle"><a href="../">Version Control with Git</a></h3>
     
   </div>
   <div class="col-xs-1">
     <h3 class="text-right">
       
-      <a href="../05-history/index.html"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span><span class="sr-only">next episode</span></a>
+      <a href="../05-github/index.html"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span><span class="sr-only">next episode</span></a>
       
     </h3>
   </div>
@@ -362,7 +318,7 @@
 <p>First let’s make sure we’re still in the right directory.
 You should be in the <code class="language-plaintext highlighter-rouge">planets</code> directory.</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd</span> ~/Desktop/planets
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd</span> ~/planets
 </code></pre></div></div>
 
 <p>Let’s create a file called <code class="language-plaintext highlighter-rouge">mars.txt</code> that contains some notes
@@ -748,75 +704,6 @@ Date:   Thu Aug 22 09:51:46 2013 -0400
 </code></pre></div></div>
 
 <blockquote class="callout">
-  <h2 id="word-based-diffing">Word-based diffing</h2>
-
-  <p>Sometimes, e.g. in the case of the text documents a line-wise
-diff is too coarse. That is where the <code class="language-plaintext highlighter-rouge">--color-words</code> option of
-<code class="language-plaintext highlighter-rouge">git diff</code> comes in very useful as it highlights the changed
-words using colors.</p>
-</blockquote>
-
-<blockquote class="callout">
-  <h2 id="paging-the-log">Paging the Log</h2>
-
-  <p>When the output of <code class="language-plaintext highlighter-rouge">git log</code> is too long to fit in your screen,
-<code class="language-plaintext highlighter-rouge">git</code> uses a program to split it into pages of the size of your screen.
-When this “pager” is called, you will notice that the last line in your
-screen is a <code class="language-plaintext highlighter-rouge">:</code>, instead of your usual prompt.</p>
-
-  <ul>
-    <li>To get out of the pager, press <kbd>Q</kbd>.</li>
-    <li>To move to the next page, press <kbd>Spacebar</kbd>.</li>
-    <li>To search for <code class="language-plaintext highlighter-rouge">some_word</code> in all pages,
-press <kbd>/</kbd>
-and type <code class="language-plaintext highlighter-rouge">some_word</code>.
-Navigate through matches pressing <kbd>N</kbd>.</li>
-  </ul>
-</blockquote>
-
-<blockquote class="callout">
-  <h2 id="limit-log-size">Limit Log Size</h2>
-
-  <p>To avoid having <code class="language-plaintext highlighter-rouge">git log</code> cover your entire terminal screen, you can limit the
-number of commits that Git lists by using <code class="language-plaintext highlighter-rouge">-N</code>, where <code class="language-plaintext highlighter-rouge">N</code> is the number of
-commits that you want to view. For example, if you only want information from
-the last commit you can use:</p>
-
-  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git log <span class="nt">-1</span>
-</code></pre></div>  </div>
-
-  <div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>commit 005937fbe2a98fb83f0ade869025dc2636b4dad5
-Author: Vlad Dracula &lt;vlad@tran.sylvan.ia&gt;
-Date:   Thu Aug 22 10:14:07 2013 -0400
-
-   Discuss concerns about Mars' climate for Mummy
-</code></pre></div>  </div>
-
-  <p>You can also reduce the quantity of information using the
-<code class="language-plaintext highlighter-rouge">--oneline</code> option:</p>
-
-  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git log <span class="nt">--oneline</span>
-</code></pre></div>  </div>
-  <div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>005937f Discuss concerns about Mars' climate for Mummy
-34961b1 Add concerns about effects of Mars' moons on Wolfman
-f22b25e Start notes on Mars as a base
-</code></pre></div>  </div>
-
-  <p>You can also combine the <code class="language-plaintext highlighter-rouge">--oneline</code> option with others. One useful
-combination adds <code class="language-plaintext highlighter-rouge">--graph</code> to display the commit history as a text-based
-graph and to indicate which commits are associated with the
-current <code class="language-plaintext highlighter-rouge">HEAD</code>, the current branch <code class="language-plaintext highlighter-rouge">master</code>, or
-<a href="https://git-scm.com/book/en/v2/Git-Internals-Git-References">other Git references</a>:</p>
-
-  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git log <span class="nt">--oneline</span> <span class="nt">--graph</span>
-</code></pre></div>  </div>
-  <div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* 005937f (HEAD -&gt; master) Discuss concerns about Mars' climate for Mummy
-* 34961b1 Add concerns about effects of Mars' moons on Wolfman
-* f22b25e Start notes on Mars as a base
-</code></pre></div>  </div>
-</blockquote>
-
-<blockquote class="callout">
   <h2 id="directories">Directories</h2>
 
   <p>Two important facts you should know about directories in Git.</p>
@@ -831,13 +718,6 @@ Try it for yourself:</p>
 <span class="nv">$ </span>git add spaceships
 <span class="nv">$ </span>git status
 </code></pre></div>      </div>
-
-      <p>Note, our newly created empty directory <code class="language-plaintext highlighter-rouge">spaceships</code> does not appear in
-the list of untracked files even if we explicitly add it (<em>via</em> <code class="language-plaintext highlighter-rouge">git add</code>) to our
-repository. This is the reason why you will sometimes see <code class="language-plaintext highlighter-rouge">.gitkeep</code> files
-in otherwise empty directories. Unlike <code class="language-plaintext highlighter-rouge">.gitignore</code>, these files are not special
-and their sole purpose is to populate a directory so that Git adds it to
-the repository. In fact, you can name such files anything you like.</p>
     </li>
     <li>
       <p>If you create a directory in your Git repository and populate it with files,
@@ -871,26 +751,6 @@ repository (<code class="language-plaintext highlighter-rouge">git commit</code>
 <p><img src="../fig/git-committing.svg" alt="The Git Commit Workflow" /></p>
 
 <blockquote class="challenge">
-  <h2 id="choosing-a-commit-message">Choosing a Commit Message</h2>
-
-  <p>Which of the following commit messages would be most appropriate for the
-last commit made to <code class="language-plaintext highlighter-rouge">mars.txt</code>?</p>
-
-  <ol>
-    <li>“Changes”</li>
-    <li>“Added line ‘But the Mummy will appreciate the lack of humidity’ to mars.txt”</li>
-    <li>“Discuss effects of Mars’ climate on the Mummy”</li>
-  </ol>
-
-  <blockquote class="solution">
-    <h2 id="solution">Solution</h2>
-    <p>Answer 1 is not descriptive enough, and the purpose of the commit is unclear;
-and answer 2 is redundant to using “git diff” to see what changed in this commit;
-but answer 3 is good: short, descriptive, and imperative.</p>
-  </blockquote>
-</blockquote>
-
-<blockquote class="challenge">
   <h2 id="committing-changes-to-git">Committing Changes to Git</h2>
 
   <p>Which command(s) below would save the changes of <code class="language-plaintext highlighter-rouge">myfile.txt</code>
@@ -918,7 +778,7 @@ to my local Git repository?</p>
   </ol>
 
   <blockquote class="solution">
-    <h2 id="solution-1">Solution</h2>
+    <h2 id="solution">Solution</h2>
 
     <ol>
       <li>Would only create a commit if files have already been staged.</li>
@@ -926,54 +786,6 @@ to my local Git repository?</p>
       <li>Is correct: first add the file to the staging area, then commit.</li>
       <li>Would try to commit a file “my recent changes” with the message myfile.txt.</li>
     </ol>
-  </blockquote>
-</blockquote>
-
-<blockquote class="challenge">
-  <h2 id="committing-multiple-files">Committing Multiple Files</h2>
-
-  <p>The staging area can hold changes from any number of files
-that you want to commit as a single snapshot.</p>
-
-  <ol>
-    <li>Add some text to <code class="language-plaintext highlighter-rouge">mars.txt</code> noting your decision
-to consider Venus as a base</li>
-    <li>Create a new file <code class="language-plaintext highlighter-rouge">venus.txt</code> with your initial thoughts
-about Venus as a base for you and your friends</li>
-    <li>Add changes from both files to the staging area,
-and commit those changes.</li>
-  </ol>
-
-  <blockquote class="solution">
-    <h2 id="solution-2">Solution</h2>
-
-    <p>First we make our changes to the <code class="language-plaintext highlighter-rouge">mars.txt</code> and <code class="language-plaintext highlighter-rouge">venus.txt</code> files:</p>
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>nano mars.txt
-<span class="nv">$ </span><span class="nb">cat </span>mars.txt
-</code></pre></div>    </div>
-    <div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Maybe I should start with a base on Venus.
-</code></pre></div>    </div>
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>nano venus.txt
-<span class="nv">$ </span><span class="nb">cat </span>venus.txt
-</code></pre></div>    </div>
-    <div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Venus is a nice planet and I definitely should consider it as a base.
-</code></pre></div>    </div>
-    <p>Now you can add both files to the staging area. We can do that in one line:</p>
-
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git add mars.txt venus.txt
-</code></pre></div>    </div>
-    <p>Or with multiple commands:</p>
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git add mars.txt
-<span class="nv">$ </span>git add venus.txt
-</code></pre></div>    </div>
-    <p>Now the files are ready to commit. You can check that using <code class="language-plaintext highlighter-rouge">git status</code>. If you are ready to commit use:</p>
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git commit <span class="nt">-m</span> <span class="s2">"Write plans to start a base on Venus"</span>
-</code></pre></div>    </div>
-    <div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[master cc127c2]
- Write plans to start a base on Venus
- 2 files changed, 2 insertions(+)
- create mode 100644 venus.txt
-</code></pre></div>    </div>
   </blockquote>
 </blockquote>
 
@@ -990,7 +802,7 @@ between its updated state and its original state.</li>
   </ul>
 
   <blockquote class="solution">
-    <h2 id="solution-3">Solution</h2>
+    <h2 id="solution-1">Solution</h2>
 
     <p>If needed, move out of the <code class="language-plaintext highlighter-rouge">planets</code> folder:</p>
 
@@ -1107,7 +919,7 @@ between its updated state and its original state, use <code class="language-plai
   <div class="col-xs-1">
     <h3 class="text-right">
       
-      <a href="../05-history/index.html"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span><span class="sr-only">next episode</span></a>
+      <a href="../05-github/index.html"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span><span class="sr-only">next episode</span></a>
       
     </h3>
   </div>
@@ -1123,30 +935,6 @@ between its updated state and its original state, use <code class="language-plai
 
 
 <footer>
-  <div class="row">
-    <div class="col-md-6 license" id="license-info" align="left">
-	
-	Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> 2018–2020
-	by <a href="https://carpentries.org/">The Carpentries</a>
-        <br>
-        Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> 2016–2018
-	by <a href="https://software-carpentry.org">Software Carpentry Foundation</a>
-	
-    </div>
-    <div class="col-md-6 help-links" align="right">
-	
-	<a href="/edit//_episodes/04-changes.md" data-checker-ignore>Edit on GitHub</a>
-	
-	/
-	<a href="/blob//CONTRIBUTING.md" data-checker-ignore>Contributing</a>
-	/
-	<a href="/">Source</a>
-	/
-	<a href="/blob//CITATION" data-checker-ignore>Cite</a>
-	/
-	<a href="mailto:team@carpentries.org">Contact</a>
-    </div>
-  </div>
   <div class="row">
     <div class="col-md-12" align="center">
       Using <a href="https://github.com/carpentries/styles/">The Carpentries style</a>

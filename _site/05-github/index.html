@@ -19,7 +19,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="last-modified" content="2020-09-16 14:43:31 -0600">
+    <meta http-equiv="last-modified" content="2020-09-16 18:28:02 -0600">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- meta "search-domain" used for google site search function google_search() -->
     <meta name="search-domain" value="">
@@ -47,7 +47,7 @@
     <link rel="icon" type="image/png" href="../assets/favicons/swc/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="../assets/favicons/swc/favicon-16x16.png" sizes="16x16" />
     <link rel="icon" type="image/png" href="../assets/favicons/swc/favicon-128.png" sizes="128x128" />
-    <meta name="application-name" content="Software Carpentry - Lesson Title"/>
+    <meta name="application-name" content="Software Carpentry - Version Control with Git"/>
     <meta name="msapplication-TileColor" content="#FFFFFF" />
     <meta name="msapplication-TileImage" content="../assets/favicons/swc/mstile-144x144.png" />
     <meta name="msapplication-square70x70logo" content="../assets/favicons/swc/mstile-70x70.png" />
@@ -64,7 +64,7 @@
 	<![endif]-->
 
   <title>
-  Remotes in GitHub &ndash; Lesson Title
+  Remotes in GitHub &ndash; Version Control with Git
   </title>  
 
   </head>
@@ -119,25 +119,11 @@
       </button>
 
       
-      
-      <a href="https://software-carpentry.org" class="pull-left">
-        <img class="navbar-logo" src="../assets/img/swc-icon-blue.svg" alt="Software Carpentry logo" />
-      </a>
-      
-
-      
       <a class="navbar-brand" href="../">Home</a>
 
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-
-	
-        <li><a href="../CODE_OF_CONDUCT.html">Code of Conduct</a></li>
-
-        
-	
-        <li><a href="../setup.html">Setup</a></li>
 
         
         <li class="dropdown">
@@ -157,37 +143,12 @@
             <li><a href="../04-changes/index.html">Tracking Changes</a></li>
             
             
-            <li><a href="../05-history/index.html">Exploring History</a></li>
-            
-            
-            <li><a href="../06-ignore/index.html">Ignoring Things</a></li>
-            
-            
-            <li><a href="../07-github/index.html">Remotes in GitHub</a></li>
-            
-            
-            <li><a href="../08-collab/index.html">Collaborating</a></li>
-            
-            
-            <li><a href="../09-conflict/index.html">Conflicts</a></li>
-            
-            
-            <li><a href="../10-open/index.html">Open Science</a></li>
-            
-            
-            <li><a href="../11-licensing/index.html">Licensing</a></li>
-            
-            
-            <li><a href="../12-citation/index.html">Citation</a></li>
-            
-            
-            <li><a href="../13-hosting/index.html">Hosting</a></li>
+            <li><a href="../05-github/index.html">Remotes in GitHub</a></li>
             
 	    <li role="separator" class="divider"></li>
             <li><a href="../aio/index.html">All in one page (Beta)</a></li>
           </ul>
         </li>
-	
 
 	
 	
@@ -212,11 +173,6 @@
         </li>
 	
 
-	
-        <li><a href="../LICENSE.html">License</a></li>
-	
-	<li><a href="/edit//_episodes/07-github.md" data-checker-ignore>Improve this page <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a></li>
-	
       </ul>
       <form class="navbar-form navbar-right" role="search" id="search" onsubmit="google_search(); return false;">
         <div class="form-group">
@@ -271,19 +227,19 @@
   <div class="col-xs-1">
     <h3 class="text-left">
       
-      <a href="../06-ignore/index.html"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span><span class="sr-only">previous episode</span></a>
+      <a href="../04-changes/index.html"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span><span class="sr-only">previous episode</span></a>
       
     </h3>
   </div>
   <div class="col-xs-10">
     
-    <h3 class="maintitle"><a href="../">Lesson Title</a></h3>
+    <h3 class="maintitle"><a href="../">Version Control with Git</a></h3>
     
   </div>
   <div class="col-xs-1">
     <h3 class="text-right">
       
-      <a href="../08-collab/index.html"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span><span class="sr-only">next episode</span></a>
+      <a href="../"><span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span><span class="sr-only">lesson home</span></a>
       
     </h3>
   </div>
@@ -408,22 +364,6 @@ identify it:</p>
 
 <p><img src="../fig/github-find-repo-string.png" alt="Where to Find Repository URL on GitHub" /></p>
 
-<p>Click on the ‘HTTPS’ link to change the <a href="../reference.html#protocol">protocol</a> from SSH to HTTPS.</p>
-
-<blockquote class="callout">
-  <h2 id="https-vs-ssh">HTTPS vs. SSH</h2>
-
-  <p>We use HTTPS here because it does not require additional configuration.  After
-the workshop you may want to set up SSH access, which is a bit more secure, by
-following one of the great tutorials from
-<a href="https://help.github.com/articles/generating-ssh-keys">GitHub</a>,
-<a href="https://confluence.atlassian.com/bitbucket/set-up-ssh-for-git-728138079.html">Atlassian/Bitbucket</a>
-and <a href="https://about.gitlab.com/2014/03/04/add-ssh-key-screencast/">GitLab</a>
-(this one has a screencast).</p>
-</blockquote>
-
-<p><img src="../fig/github-change-repo-string.png" alt="Changing the Repository URL on GitHub" /></p>
-
 <p>Copy that URL from the browser, go into the local <code class="language-plaintext highlighter-rouge">planets</code> repository, and run
 this command:</p>
 
@@ -446,9 +386,6 @@ and GitHub, so it’s helpful to stick with this unless there’s a reason not t
 origin   https://github.com/vlad/planets.git (fetch)
 </code></pre></div></div>
 
-<p>We’ll discuss remotes in more detail in the next episode, while
-talking about how they might be used for collaboration.</p>
-
 <p>Once the remote is set up, this command will push the changes from
 our local repository to the repository on GitHub:</p>
 
@@ -466,60 +403,9 @@ To https://github.com/vlad/planets.git
  * [new branch]      master -&gt; master
 </code></pre></div></div>
 
-<blockquote class="callout">
-  <h2 id="proxy">Proxy</h2>
-
-  <p>If the network you are connected to uses a proxy, there is a chance that your
-last command failed with “Could not resolve hostname” as the error message. To
-solve this issue, you need to tell Git about the proxy:</p>
-
-  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git config <span class="nt">--global</span> http.proxy http://user:password@proxy.url
-<span class="nv">$ </span>git config <span class="nt">--global</span> https.proxy http://user:password@proxy.url
-</code></pre></div>  </div>
-
-  <p>When you connect to another network that doesn’t use a proxy, you will need to
-tell Git to disable the proxy using:</p>
-
-  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git config <span class="nt">--global</span> <span class="nt">--unset</span> http.proxy
-<span class="nv">$ </span>git config <span class="nt">--global</span> <span class="nt">--unset</span> https.proxy
-</code></pre></div>  </div>
-</blockquote>
-
-<blockquote class="callout">
-  <h2 id="password-managers">Password Managers</h2>
-
-  <p>If your operating system has a password manager configured, <code class="language-plaintext highlighter-rouge">git push</code> will
-try to use it when it needs your username and password.  For example, this
-is the default behavior for Git Bash on Windows. If you want to type your
-username and password at the terminal instead of using a password manager,
-type:</p>
-
-  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">unset </span>SSH_ASKPASS
-</code></pre></div>  </div>
-
-  <p>in the terminal, before you run <code class="language-plaintext highlighter-rouge">git push</code>.  Despite the name, <a href="https://git-scm.com/docs/gitcredentials#_requesting_credentials">Git uses
-<code class="language-plaintext highlighter-rouge">SSH_ASKPASS</code> for all credential
-entry</a>, so
-you may want to unset <code class="language-plaintext highlighter-rouge">SSH_ASKPASS</code> whether you are using Git via SSH or
-https.</p>
-
-  <p>You may also want to add <code class="language-plaintext highlighter-rouge">unset SSH_ASKPASS</code> at the end of your <code class="language-plaintext highlighter-rouge">~/.bashrc</code>
-to make Git default to using the terminal for usernames and passwords.</p>
-</blockquote>
-
 <p>Our local and remote repositories are now in this state:</p>
 
 <p><img src="../fig/github-repo-after-first-push.svg" alt="GitHub Repository After First Push" /></p>
-
-<blockquote class="callout">
-  <h2 id="the--u-flag">The ‘-u’ Flag</h2>
-
-  <p>You may see a <code class="language-plaintext highlighter-rouge">-u</code> option used with <code class="language-plaintext highlighter-rouge">git push</code> in some documentation.  This
-option is synonymous with the <code class="language-plaintext highlighter-rouge">--set-upstream-to</code> option for the <code class="language-plaintext highlighter-rouge">git branch</code>
-command, and is used to associate the current branch with a remote branch so
-that the <code class="language-plaintext highlighter-rouge">git pull</code> command can be used without any arguments. To do this,
-simply use <code class="language-plaintext highlighter-rouge">git push -u origin master</code> once the remote has been set up.</p>
-</blockquote>
 
 <p>We can pull changes from the remote repository to the local one as well:</p>
 
@@ -536,116 +422,16 @@ synchronized.  If someone else had pushed some changes to the repository on
 GitHub, though, this command would download them to our local repository.</p>
 
 <blockquote class="challenge">
-  <h2 id="github-gui">GitHub GUI</h2>
-
-  <p>Browse to your <code class="language-plaintext highlighter-rouge">planets</code> repository on GitHub.
-Under the Code tab, find and click on the text that says “XX commits” (where “XX” is some number).
-Hover over, and click on, the three buttons to the right of each commit.
-What information can you gather/explore from these buttons?
-How would you get that same information in the shell?</p>
-
-  <blockquote class="solution">
-    <h2 id="solution">Solution</h2>
-    <p>The left-most button (with the picture of a clipboard) copies the full identifier of the commit 
-to the clipboard. In the shell, <code class="language-plaintext highlighter-rouge">git log</code> will show you the full commit identifier for each 
-commit.</p>
-
-    <p>When you click on the middle button, you’ll see all of the changes that were made in that 
-particular commit. Green shaded lines indicate additions and red ones removals. In the shell we 
-can do the same thing with <code class="language-plaintext highlighter-rouge">git diff</code>. In particular, <code class="language-plaintext highlighter-rouge">git diff ID1..ID2</code> where ID1 and 
-ID2 are commit identifiers (e.g. <code class="language-plaintext highlighter-rouge">git diff a3bf1e5..041e637</code>) will show the differences 
-between those two commits.</p>
-
-    <p>The right-most button lets you view all of the files in the repository at the time of that 
-commit. To do this in the shell, we’d need to checkout the repository at that particular time. 
-We can do this with <code class="language-plaintext highlighter-rouge">git checkout ID</code> where ID is the identifier of the commit we want to 
-look at. If we do this, we need to remember to put the repository back to the right state 
-afterwards!</p>
-  </blockquote>
-</blockquote>
-
-<blockquote class="callout">
-  <h2 id="uploading-files-directly-in-github-browser">Uploading files directly in GitHub browser</h2>
-
-  <p>Github also allows you to skip the command line and upload files directly to 
-your repository without having to leave the browser. There are two options. 
-First you can click the “Upload files” button in the toolbar at the top of the
-file tree. Or, you can drag and drop files from your desktop onto the file 
-tree. You can read more about this <a href="https://help.github.com/articles/adding-a-file-to-a-repository/">on this GitHub page</a></p>
-</blockquote>
-
-<blockquote class="challenge">
-  <h2 id="github-timestamp">GitHub Timestamp</h2>
-
-  <p>Create a remote repository on GitHub. Push the contents of your local
-repository to the remote. Make changes to your local repository and push these
-changes. Go to the repo you just created on GitHub and check the
-<a href="../reference.html#timestamp">timestamps</a> of the files. How does GitHub
-record times, and why?</p>
-
-  <blockquote class="solution">
-    <h2 id="solution-1">Solution</h2>
-    <p>GitHub displays timestamps in a human readable relative format (i.e. “22 hours ago” or “three 
-weeks ago”). However, if you hover over the timestamp, you can see the exact time at which the 
-last change to the file occurred.</p>
-  </blockquote>
-</blockquote>
-
-<blockquote class="challenge">
   <h2 id="push-vs-commit">Push vs. Commit</h2>
 
   <p>In this lesson, we introduced the “git push” command.
 How is “git push” different from “git commit”?</p>
 
   <blockquote class="solution">
-    <h2 id="solution-2">Solution</h2>
+    <h2 id="solution">Solution</h2>
     <p>When we push changes, we’re interacting with a remote repository to update it with the changes 
 we’ve made locally (often this corresponds to sharing the changes we’ve made with others). 
 Commit only updates your local repository.</p>
-  </blockquote>
-</blockquote>
-
-<blockquote class="challenge">
-  <h2 id="github-license-and-readme-files">GitHub License and README files</h2>
-
-  <p>In this section we learned about creating a remote repository on GitHub, but when you initialized 
-your GitHub repo, you didn’t add a README.md or a license file. If you had, what do you think 
-would have happened when you tried to link your local and remote repositories?</p>
-
-  <blockquote class="solution">
-    <h2 id="solution-3">Solution</h2>
-    <p>In this case, we’d see a merge conflict due to unrelated histories. When GitHub creates a 
-README.md file, it performs a commit in the remote repository. When you try to pull the remote 
-repository to your local repository, Git detects that they have histories that do not share a 
-common origin and refuses to merge.</p>
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git pull origin master
-</code></pre></div>    </div>
-
-    <div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>warning: no common commits
-remote: Enumerating objects: 3, done.
-remote: Counting objects: 100% (3/3), done.
-remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
-Unpacking objects: 100% (3/3), done.
-From https://github.com/vlad/planets
- * branch            master     -&gt; FETCH_HEAD
- * [new branch]      master     -&gt; origin/master
-fatal: refusing to merge unrelated histories
-</code></pre></div>    </div>
-
-    <p>You can force git to merge the two repositories with the option <code class="language-plaintext highlighter-rouge">--allow-unrelated-histories</code>. 
-Be careful when you use this option and carefully examine the contents of local and remote 
-repositories before merging.</p>
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git pull <span class="nt">--allow-unrelated-histories</span> origin master
-</code></pre></div>    </div>
-
-    <div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>From https://github.com/vlad/planets
- * branch            master     -&gt; FETCH_HEAD
-Merge made by the 'recursive' strategy.
-README.md | 1 +
-1 file changed, 1 insertion(+)
-create mode 100644 README.md
-</code></pre></div>    </div>
-
   </blockquote>
 </blockquote>
 
@@ -658,9 +444,6 @@ create mode 100644 README.md
   <ul>
     
     <li><p>A local Git repository can be connected to one or more remote repositories.</p>
-</li>
-    
-    <li><p>Use the HTTPS protocol to connect to remote repositories until you have learned how to set up SSH.</p>
 </li>
     
     <li><p><code class="language-plaintext highlighter-rouge">git push</code> copies changes from a local repository to a remote repository.</p>
@@ -717,7 +500,7 @@ create mode 100644 README.md
   <div class="col-xs-1">
     <h3 class="text-left">
       
-      <a href="../06-ignore/index.html"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span><span class="sr-only">previous episode</span></a>
+      <a href="../04-changes/index.html"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span><span class="sr-only">previous episode</span></a>
       
     </h3>
   </div>
@@ -727,7 +510,7 @@ create mode 100644 README.md
   <div class="col-xs-1">
     <h3 class="text-right">
       
-      <a href="../08-collab/index.html"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span><span class="sr-only">next episode</span></a>
+      <a href="../"><span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span><span class="sr-only">lesson home</span></a>
       
     </h3>
   </div>
@@ -743,30 +526,6 @@ create mode 100644 README.md
 
 
 <footer>
-  <div class="row">
-    <div class="col-md-6 license" id="license-info" align="left">
-	
-	Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> 2018–2020
-	by <a href="https://carpentries.org/">The Carpentries</a>
-        <br>
-        Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> 2016–2018
-	by <a href="https://software-carpentry.org">Software Carpentry Foundation</a>
-	
-    </div>
-    <div class="col-md-6 help-links" align="right">
-	
-	<a href="/edit//_episodes/07-github.md" data-checker-ignore>Edit on GitHub</a>
-	
-	/
-	<a href="/blob//CONTRIBUTING.md" data-checker-ignore>Contributing</a>
-	/
-	<a href="/">Source</a>
-	/
-	<a href="/blob//CITATION" data-checker-ignore>Cite</a>
-	/
-	<a href="mailto:team@carpentries.org">Contact</a>
-    </div>
-  </div>
   <div class="row">
     <div class="col-md-12" align="center">
       Using <a href="https://github.com/carpentries/styles/">The Carpentries style</a>
