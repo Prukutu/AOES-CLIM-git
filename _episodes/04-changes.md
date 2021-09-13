@@ -28,7 +28,7 @@ $ cd ~/planets
 
 Let's create a file called `mars.txt` that contains some notes
 about the Red Planet's suitability as a base.
-We'll use `nano` to edit the file;
+In the examples below, we'll use `nano` to edit the file;
 you can use whatever editor you like.
 In particular, this does not have to be the `core.editor` you set globally earlier. But remember, the bash command to create or edit a new file will depend on the editor you choose (it might not be `nano`). For a refresher on text editors, check out ["Which Editor?"](https://swcarpentry.github.io/shell-novice/03-create/) in [The Unix Shell](https://swcarpentry.github.io/shell-novice/) lesson.
 
@@ -208,13 +208,22 @@ you may use a different editor, and don't need to `cat`.)
 
 ~~~
 $ nano mars.txt
-$ cat mars.txt
 ~~~
 {: .language-bash}
 
+Add:
+~~~
+The two moons may be a problem for Wolfman	
+~~~
+
+~~~
+$ cat mars.txt
+~~~
+{: .language-bash}
+	
 ~~~
 Cold and dry, but everything is my favorite color
-The two moons may be a problem for Wolfman
+The two moons may be a problem for Wolfman	
 ~~~
 {: .output}
 
