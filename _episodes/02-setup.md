@@ -26,7 +26,7 @@ where `verb` is what we actually want to do and `options` is additional optional
 
 First, we can check to see how these options are set by default on the COLA Computers:
 ~~~
-$ git config --list"
+$ git config --list
 ~~~
 {: .language-bash}
 
