@@ -16,7 +16,7 @@ keypoints:
 
 __If you have a GitHub account already, make sure you can find it on the web and can login to it.__
 
-Note that as of September 2021, GitHub is upgrading its security requirements. Your old account may require updating to continue to work. Please see: https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/updating-your-github-access-credentials for options.
+Note that as of September 2021, GitHub is upgrading its security requirements. Your old account may require updating to continue to work. Please see <a href="https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/updating-your-github-access-credentials">this link</a> for options.
 
 These include the following choices:
 1. <a href="https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account ">Add existing key to ssh-agent</a> and then <a href="https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories#switching-remote-urls-from-https-to-ssh">changing https access to ssh</a>.
