@@ -87,3 +87,4 @@ collaboration among different people.
 > >     problems.
 > {: .solution}
 {: .challenge}
+
