@@ -46,18 +46,17 @@ $ cd planets
 Then we tell Git to make `planets` a [repository]({{ page.root }}{% link reference.md %}#repository)
 -- a place where Git can store versions of our files:
 
-
 ~~~
 $ git init
 ~~~
 {: .language-bash}
 
 It is important to note that `git init` will create a repository that
-includes subdirectories and their files---there is no need to create
+includes subdirectories and their files -- there is no need to create
 separate repositories nested within the `planets` repository, whether
 subdirectories are present from the beginning or added later. Also, note
 that the creation of the `planets` directory and its initialization as a
-repository are completely separate processes.
+repository are <u>separate processes</u>.
 
 If we use `ls` to show the directory's contents,
 it appears that nothing has changed:
@@ -80,7 +79,7 @@ $ ls -a
 ~~~
 {: .output}
 
-Git uses this special subdirectory to store all the information about the project, 
+Git uses this special subdirectory to store information about the project, 
 including all files and sub-directories located within the project's directory.
 If we ever delete the `.git` subdirectory,
 we will lose the project's history.
@@ -92,6 +91,7 @@ by asking Git to tell us the status of our project:
 $ git status
 ~~~
 {: .language-bash}
+
 ~~~
 On branch master
 
@@ -145,12 +145,14 @@ wording of the output might be slightly different.
 > > $ git status
 > > ~~~
 > > {: .language-bash}
+> > 
 > > ~~~
 > > fatal: Not a git repository (or any of the parent directories): .git
 > > ~~~
 > > {: .output}
 > {: .solution}
 {: .challenge}
+
 > ## Correcting `git init` Mistakes
 > Wolfman explains to Dracula how a nested repository is redundant and may cause confusion
 > down the road. Dracula would like to remove the nested repository. How can Dracula undo 
@@ -159,13 +161,17 @@ wording of the output might be slightly different.
 > > ## Solution -- USE WITH CAUTION!
 > >
 > > ### Background
-> > Removing files from a git repository needs to be done with caution. To remove files from the working tree and not from your working directory, use
+> > Removing files from a git repository needs to be done with caution. 
+> > To remove files from the working tree and not from your working directory, use:
+> > 
 > > ~~~
 > > $ rm filename
 > > ~~~
 > > {: .language-bash}
 > > 
-> > The file being removed has to be in sync with the branch head with no updates. If there are updates, the file can be removed by force by using the `-f` option. Similarly a directory can be removed from git using `rm -r dirname` or `rm -rf dirname`.
+> > The file being removed has to be in sync with the branch head with no updates. 
+> > If there are updates, the file can be removed by force by using the `-f` option. 
+> > Similarly a directory can be removed from git using `rm -r dirname` or `rm -rf dirname`.
 > >
 > > ### Solution
 > > Git keeps all of its files in the `.git` directory.
