@@ -30,7 +30,11 @@ Let's create a file called `mars.txt` that contains some notes
 about the Red Planet's suitability as a base.
 In the examples below, we'll use `nano` to edit the file;
 you can use whatever editor you like.
-In particular, this does not have to be the `core.editor` you set globally earlier. But remember, the bash command to create or edit a new file will depend on the editor you choose (it might not be `nano`). For a refresher on text editors, check out ["Which Editor?"](https://swcarpentry.github.io/shell-novice/03-create/) in [The Unix Shell](https://swcarpentry.github.io/shell-novice/) lesson.
+In particular, this does not have to be the `core.editor` you set globally earlier. 
+But remember, the bash command to create or edit a new file will depend on the 
+editor you choose (it might not be `nano`). For a refresher on text editors, 
+check out "Which Editor?" in the
+[Using Shells]([https://pdirmeyer.github.io/AOES-CLIM-CLIM680-Unix-Files-Directories/) lesson.
 
 ~~~
 $ nano mars.txt
@@ -141,7 +145,8 @@ When we run `git commit`,
 Git takes everything we have told it to save by using `git add`
 and stores a copy permanently inside the special `.git` directory.
 This permanent copy is called a [commit]({{ page.root }}{% link reference.md %}#commit)
-(or [revision]({{ page.root }}{% link reference.md %}#revision)) and its short identifier is `f22b25e`. Your commit may have another identifier.
+(or [revision]({{ page.root }}{% link reference.md %}#revision)) and its short identifier is `f22b25e`. 
+Your commit may have another identifier.
 
 We use the `-m` flag (for "message")
 to record a short, descriptive, and specific comment that will help us remember later on what we did and why.
@@ -150,8 +155,10 @@ Git will launch `nano` (or whatever other editor we configured as `core.editor`)
 so that we can write a longer message.
 
 [Good commit messages][commit-messages] start with a brief (<50 characters) statement about the
-changes made in the commit. Generally, the message should complete the sentence "If applied, this commit will" <commit message here>.
-If you want to go into more detail, add a blank line between the summary line and your additional notes. Use this additional space to explain why you made changes and/or what their impact will be.
+changes made in the commit. Generally, the message should complete the sentence 
+"If applied, this commit will" <commit message here>.
+If you want to go into more detail, add a blank line between the summary line and your additional notes. 
+Use this additional space to explain why you made changes and/or what their impact will be.
 
 If we run `git status` now:
 
@@ -197,7 +204,7 @@ and the log message Git was given when the commit was created.
 >
 > If we run `ls` at this point, we will still see just one file called `mars.txt`.
 > That's because Git saves information about files' history
-> in the special `.git` directory mentioned earlier
+> within the special `.git` directory mentioned earlier
 > so that our filesystem doesn't become cluttered
 > (and so that we can't accidentally edit or delete an old version).
 {: .callout}
@@ -330,6 +337,7 @@ Git insists that we add files to the set we want to commit
 before actually committing anything. This allows us to commit our
 changes in stages and capture changes in logical portions rather than
 only large batches.
+
 For example,
 suppose we're adding a few citations to relevant research to our thesis.
 We might want to commit those additions,
