@@ -62,6 +62,7 @@ $ git config --list
 If you have not set up Git on Hopper before, you will see nothing.
 
 Here is how Dracula sets up his new laptop:
+
 ~~~
 $ git config --global user.name "Vlad Dracula"
 $ git config --global user.email "vlad@tran.sylvan.ia"
