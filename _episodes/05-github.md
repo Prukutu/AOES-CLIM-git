@@ -20,12 +20,14 @@ only thing missing is to copy changes from one repository to another.
 Systems like Git allow us to move work between any two repositories.  In
 practice, though, it's easiest to use one copy as a central hub, and to keep it
 on the web rather than on someone's laptop.  Most programmers use hosting
-services like [GitHub](https://github.com), [Bitbucket](https://bitbucket.org) or
-[GitLab](https://gitlab.com/) to hold those master copies; we'll explore the pros
+services like [GitHub](https://github.com){:target="_blank" rel="noopener"}, 
+[Bitbucket](https://bitbucket.org){:target="_blank" rel="noopener"} or
+[GitLab](https://gitlab.com/){:target="_blank" rel="noopener"} 
+to hold those master copies; we'll explore the pros
 and cons of this in the final section of this lesson.
 
 Let's start by sharing the changes we've made to our current project with the
-world.  Log in to GitHub, then click on the icon in the top right corner to
+world.  Log in to GitHub, then click on the `+` icon in the top right corner to
 create a new repository called `planets`:
 
 ![Creating a Repository on GitHub (Step 1)](../fig/github-create-repo-01.png)
@@ -74,7 +76,7 @@ identify it:
 ![Where to Find Repository URL on GitHub](../fig/github-find-repo-string.png)
 
 Copy that URL from the browser, go into the local `planets` repository, and run
-this command:
+your version this command:
 
 ~~~
 $ git remote add origin https://github.com/vlad/planets.git
