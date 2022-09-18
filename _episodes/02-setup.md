@@ -16,27 +16,31 @@ keypoints:
 
 __If you have a GitHub account already, make sure you can find it on the web and can login to it.__
 
-Note that as of September 2021, GitHub is upgrading its security requirements. Your old account may require updating to continue to work. Please see <a href="https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/updating-your-github-access-credentials">this link</a> for options.
+Note that as of September 2021, GitHub is upgrading its security requirements. Your old account may require updating to continue to work. Please see [this link](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/updating-your-github-access-credentials){:target="_blank" rel="noopener"} for options.
 
 These include the following choices:
-1. <a href="https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account ">Add existing key to ssh-agent</a> and then <a href="https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories#switching-remote-urls-from-https-to-ssh">changing https access to ssh</a>.
-2. Remaining with https access but <a href="https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token">creating a personal access token (PAT) for https authentication</a>
+1. [Add existing key to ssh-agent](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account){:target="_blank" rel="noopener"} and then [changing https access to ssh](https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories#switching-remote-urls-from-https-to-ssh"){:target="_blank" rel="noopener"}.
+2. Remaining with https access but [creating a personal access token (PAT) for https authentication](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token){:target="_blank" rel="noopener"}.
 
-There are also instructions for <a href="https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories#switching-remote-urls-from-ssh-to-https">switching a repo’s authentication method between https and ssh</a>.
+There are also instructions for [switching a repo’s authentication method between https and ssh](https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories#switching-remote-urls-from-ssh-to-https){:target="_blank" rel="noopener"}.
 
 __If you do not have a GitHub account, create one:__
 
-1. Go to https://github.com, choose a username, email address to use, and password to sign up to Github. 
-2. Follow the rest of the instrucitons to create your account.
+1. Go to [https://github.com](https://github.com){:target="_blank" rel="noopener"}, choose a username, email address to use, and password to sign up to Github. 
+2. Follow the instrucitons to create your account.
 3. Choose the free service - it is more than adequate for what we will do.
 
-See the links above regarding "security options" for those choices - SSH keys work just like you have set up to log into COLA computers. 
+See the links above regarding "security options" for those choices - SSH keys work just like 
+you have set up to log into Hopper without typing a password each time. 
 PATs work like passwords.
 
 
-### Git on Unix
+### Git on the Command Line
 
-Git is a command line version control system that is available by default on most Unix/Linux, Mac computers and can be easily installed for Windows (https://gitforwindows.org/). You can use it on your own computer.  In this class,  we will be using it on the COLA computers where it is already installed.
+Git is a command line version control system that is available by default 
+on most Unix/Linux and Mac computers and can be easily installed for Windows 
+(https://gitforwindows.org/). You can use it on your own computer.  
+In this class, we will be using it on the Hopper computers where it is already installed.
 
 When we use Git for the first time,
 we need to configure a few things. Below are a few examples
@@ -48,12 +52,14 @@ of configurations we will set as we get started with Git:
 On a command line, Git commands are written as `git verb options`,
 where `verb` is what we actually want to do and `options` is additional optional information which may be needed for the `verb`.
 
-First, we can check to see how these options are set by default on the COLA Computers:
+First, we can check to see how these options are set by default on Hopper:
+
 ~~~
 $ git config --list
 ~~~
 {: .language-bash}
 
+If you have not set up Git on Hopper before, you will see nothing.
 
 Here is how Dracula sets up his new laptop:
 ~~~
@@ -64,9 +70,9 @@ $ git config --global user.email "vlad@tran.sylvan.ia"
 
 Please use your own name and email address instead of Dracula's. This user name and email will be associated with your subsequent Git activity,
 which means that any changes pushed to
-[GitHub](https://github.com/) will include this information.
+[GitHub](https://github.com/){:target="_blank" rel="noopener"} will include this information.
 
-For these lessons, we will be interacting with [GitHub](https://github.com/) and so the email address used should be the same as the one used when setting up your GitHub account. If you are concerned about privacy, please review [GitHub's instructions for keeping your email address private][git-privacy]. 
+For these lessons, we will be interacting with [GitHub](https://github.com/){:target="_blank" rel="noopener"} and so the email address used should be the same as the one used when setting up your GitHub account. If you are concerned about privacy, please review [GitHub's instructions for keeping your email address private][git-privacy]. 
 
 >## Keeping your email private
 >
