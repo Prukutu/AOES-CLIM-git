@@ -25,8 +25,8 @@ We've all been in this situation before: it seems ridiculous to have
 multiple nearly-identical versions of the same document. Some word
 processors let us deal with this a little better, such as Microsoft
 Word's 
-[Track Changes](https://support.office.com/en-us/article/Track-changes-in-Word-197ba630-0f5f-4a8e-9a77-3712475e806a), 
-Google Docs' [version history](https://support.google.com/docs/answer/190843?hl=en).
+[Track Changes](https://support.office.com/en-us/article/Track-changes-in-Word-197ba630-0f5f-4a8e-9a77-3712475e806a){:target="_blank" rel="noopener"}, 
+Google Docs' [version history](https://support.google.com/docs/answer/190843?hl=en){:target="_blank" rel="noopener"}.
 
 Version control systems start with a base version of the document and
 then record changes you make each step of the way. You can
@@ -51,9 +51,9 @@ incorporate two sets of changes into the same base document.
 A version control system is a tool that keeps track of these changes for us,
 effectively creating different versions of our files. It allows us to decide
 which changes will be made to the next version (each record of these changes is
-called a [commit]({{ page.root }}{% link reference.md %}#commit)), and keeps useful metadata
+called a [commit]({{ page.root }}{% link reference.md %}#commit)){:target="_blank" rel="noopener"}, and keeps useful metadata
 about them. The complete history of commits for a particular project and their
-metadata make up a [repository]({{ page.root }}{% link reference.md %}#repository).
+metadata make up a [repository]({{ page.root }}{% link reference.md %}#repository){:target="_blank" rel="noopener"}.
 Repositories can be kept in sync across different computers, facilitating
 collaboration among different people.
 
