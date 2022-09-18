@@ -28,6 +28,10 @@ kind: "lesson"
 # Please don't change it: <USERNAME>/<PROJECT> is correct.
 repository: <USERNAME>/<PROJECT>
 
+# Kramdown
+kramdown:
+  input: Kramdown
+
 # Email address, no mailto:
 email: "team@carpentries.org"
 
