@@ -20,23 +20,26 @@ You will have a URL associated with your Github pages of the form:
   `https://username.github.io/` 
   
 where _username_ is your Github user name.
-  
+<br><br>
+
 #### Links to individual repositories
 You can have a site for every repository - the will have a similar form:
   
   `https://username.github.io/repo-name/` 
   
 where _repo-name_ is the name of the repository.
+<br><br>
   
 #### Set up a repo for your class project
 
-If you have not alreasdy created a repository for your class project, you can do that now. 
+If you have not already created a repository for your class project, you can do that now. 
 For example, if you will call it `clim680_project`, click on **Repositories** at the top of 
 the page and click **New** to create a new repository.
 
 To make a repository web site, go into your repository and click **Settings** at the top
 of the page, and **Pages** on the left side. 
 Choose a branch to deploy, and click **Save**
+<br><br>
 
 #### index.html is your landing page
 You can add a file called `index.md` in your repository. It is a markdown file that will become the 
@@ -51,6 +54,7 @@ You can use this method to create a set of links, e.g., one to your 5-minute pro
 one to your data description (copied from Blackboard), etc.
 
 In the absence of a `index.md` file in your repostiory, the Github Pages web link will default to your `README.md` file.
+<br><br>
 
 #### Formatting markdown in Github
 Formatiing is basically the same as markdown in Jupyter notebooks.  There is a 
@@ -65,6 +69,7 @@ can be anything, including the name of a figure file), and put
 your figures there (as .pdf files, .png files, .jpg, .svg, etc.) and embed them in your markdowns as images
 linked by their relative paths. 
 Likewise for any other content links.
+<br><br>
 
 #### Styles from Jekyll
 
@@ -73,6 +78,7 @@ formatting style to your default web page.  A single line of code should be
 added to this file:
 `theme: jekyll-theme-xxxxxx`
 where `xxxxxx` is the name of one of the following themes:
+
 * architect
 * cayman
 * dinky
@@ -86,5 +92,6 @@ where `xxxxxx` is the name of one of the following themes:
 * slate
 * tactile
 * time-machine
+
 You can try them out to see how they look 
 ([more about themes](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll)).
