@@ -8,6 +8,9 @@ questions:
 objectives:
 - "Understand how to create a web page associated with a repository on github."
 - "Understand how to use Jekyll formatting templates."
+keypoints:
+- "Pages can be activated for any repository, allowing you to generate web pages for that repository."
+- "Github allows pages to be generated using standard markdown syntax - no need to know HTML."
 ---
 
 ## Github Pages
